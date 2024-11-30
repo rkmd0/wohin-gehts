@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Routefinding with OpenStreetMap and OpenRouteService</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="poi-selector">
+        <h3>Select POIs for Route</h3>
+        <div id="poi-list"></div>
+        <button id="create-route">create route</button>
+    </div>
+    <div id="route-options">
+        <select id="transport-mode">
+            <option value="foot-walking">walking</option>
+            <option value="driving-car">driving</option>
+            <option value="cycling-regular">cycling</option>
+        </select>
+    </div>
+    <div id="map"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
