@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <b>${tags.name}</b><br>
                         Type: ${tags.tourism}<br>
                         <button class="add-to-route-btn" data-index="${poiIndex}">
-                            Add to Route
+                            ${document.querySelector(`input[data-index="${poiIndex}"]`)?.checked ? 'Remove from Route' : 'Add to Route'}
                         </button>
                     </div>
                 `);
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (checkbox) {
                                 // Toggle the checkbox
                                 checkbox.checked = !checkbox.checked;
-                                
+                                addButton.textContent = checkbox.checked ? 'Remove from Route' : 'Add to Route';
                                 // Log debugging information
                                 console.log(`Toggled POI: ${poiList[index].name}`, {
                                     index: index,
